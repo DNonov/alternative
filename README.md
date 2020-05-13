@@ -9,7 +9,7 @@ And select the command Alternative.
 
 Or just use the default keybinding `Alt` + `a`.
 
-![alternative](https://raw.githubusercontent.com/DNonov/lightDelight/master/img/example.gif)
+![alternative](https://raw.githubusercontent.com/DNonov/alternative/master/img/example.gif)
 
 NOTE: The language of the example above is irrelevant, since the extension is
 language agnostic. It would work the same way in any other language.
