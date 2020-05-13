@@ -14,7 +14,7 @@ class PositionExtractor {
     // char is a token.
     const tokens: Array<string> = textLine.split('');
     // All upper and lower case letters and all numbers plus space and brackets.
-    const alphaNumericSpaceOrBracket: RegExp = /[a-zA-Z0-9\ \)\(]/;
+    const alphaNumericSpaceOrBracket: RegExp = /[a-zA-Z0-9\ \)\(;]/;
     // All symbols and white space.
     const symbol: RegExp = /[$-\/:-?{-~!"^_`\[\]\ ]+/;
     // All upper and lower case letters.
