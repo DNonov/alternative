@@ -2,7 +2,7 @@
     "name": "alternative",
     "displayName": "alternative",
     "description": "Plugin that alternate between various operators.",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "publisher": "DimitarNonov",
     "repository": {
       "type": "git",
@@ -11,7 +11,7 @@
     "engines": {
         "vscode": "^1.20.0"
     },
-    "icon": "media/logo.png",
+    "icon": "img/logo.png",
     "categories": [
         "Other"
     ],
