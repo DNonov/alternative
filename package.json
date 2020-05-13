@@ -2,7 +2,7 @@
     "name": "alternative",
     "displayName": "alternative",
     "description": "Plugin that alternate between various operators.",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "publisher": "DimitarNonov",
     "repository": {
       "type": "git",
