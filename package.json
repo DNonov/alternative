@@ -2,7 +2,7 @@
     "name": "alternative",
     "displayName": "alternative",
     "description": "Plugin that alternate between various operators.",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "publisher": "DimitarNonov",
     "repository": {
       "type": "git",
@@ -32,7 +32,7 @@
         ],
         "keybindings": [
           {
-            "key": "alt + a",
+            "key": "Alt+a",
             "command": "extension.alternative",
             "when": "editorTextFocus"
           }
