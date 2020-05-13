@@ -20,4 +20,4 @@ const result = 1 - 2;
 * [Marketplace](https://marketplace.visualstudio.com/items?itemName=DimitarNonov.alternative)
 
 ## License
-[MIT](./LICENSE)
+[MIT](./LICENSE.md)
