@@ -5,15 +5,14 @@
 This is a vscode extension, that alternate operators.
 
 Just put your cursor on top of the operator and pres `ctrl` + `shift` + `p`.
-And find Alternative.
+And select the command Alternative.
 
-``` typescript
-// Before
-const result = 1 + 2;
+Or just use the default keybinding `Alt` + `a`.
 
-// After
-const result = 1 - 2;
-```
+![alternative](media/example.gif)
+
+NOTE: The language of the example above is irrelevant, since the extension is
+language agnostic. It would work the same way in any other language.
 
 ## Links
 * [GitHub](https://github.com/DNonov/alternative)
