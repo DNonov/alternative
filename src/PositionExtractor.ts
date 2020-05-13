@@ -13,8 +13,8 @@ class PositionExtractor {
     // Text representation of the current line, split into chars and so every
     // char is a token.
     const tokens: Array<string> = textLine.split('');
-    // All upper and lower case letters and all numbers plus with space.
-    const alphaNumericOrSpace: RegExp = /[a-zA-Z0-9\ ]/;
+    // All upper and lower case letters and all numbers plus space and brackets.
+    const alphaNumericSpaceOrBracket: RegExp = /[a-zA-Z0-9\ \)\(]/;
     // All symbols and white space.
     const symbol: RegExp = /[$-\/:-?{-~!"^_`\[\]\ ]+/;
     // All upper and lower case letters.
@@ -23,7 +23,7 @@ class PositionExtractor {
     if (letter.test(tokens[cursorPosition])) {
       return this.constructPosition(symbol, tokens, cursorPosition);
     } else {
-      return this.constructPosition(alphaNumericOrSpace, tokens, cursorPosition);
+      return this.constructPosition(alphaNumericSpaceOrBracket, tokens, cursorPosition);
     }
   }
 
