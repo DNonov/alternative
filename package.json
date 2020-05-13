@@ -1,0 +1,48 @@
+{
+    "name": "alternative",
+    "displayName": "alternative",
+    "description": "Plugin that alternate between various operators.",
+    "version": "0.0.1",
+    "publisher": "DimitarNonov",
+    "repository": {
+      "type": "git",
+      "url": "http://github.com/DNonov/alternative"
+    },
+    "engines": {
+        "vscode": "^1.20.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "keywords": [
+      "Productivity",
+      "Visual Studio Code"
+    ],
+    "activationEvents": [
+        "onCommand:extension.alternative"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.alternative",
+                "title": "Alternative"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test",
+        "package": "vsce package"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "tslint": "^5.8.0",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    }
+}
