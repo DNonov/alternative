@@ -29,6 +29,14 @@
                 "command": "extension.alternative",
                 "title": "Alternative"
             }
+        ],
+        "keybindings": [
+          {
+            "key": "alt + a",
+            "command": "extension.alternative",
+            "when": "editorTextFocus"
+          }
+
         ]
     },
     "scripts": {
