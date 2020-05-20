@@ -63,6 +63,12 @@ class Alternative {
       case 'false':
         return 'true';
 
+      //Python True - False
+      case 'True':
+        return 'False';
+      case 'False':
+        return 'True';
+
       default:
         return operator;
     }
