@@ -84,4 +84,13 @@ suite('alternates operators', function () {
       assert.equal(alternative.alternate(word), '--');
       assert.equal(alternative.alternate(oppositeWord), '++');
     });
+
+    // Bool Python
+    test('alternates bool Python', () => {
+      const word = 'True';
+      const oppositeWord = 'False';
+
+      assert.equal(alternative.alternate(word), 'False');
+      assert.equal(alternative.alternate(oppositeWord), 'True');
+    });
 });
