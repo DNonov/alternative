@@ -1,9 +1,15 @@
+/**
+ * Extracts position under the cursor and returns a Range.
+ *
+ * @class PositionExtractor
+ */
 class PositionExtractor {
 
   /**
    * Constructs position under the cursor.
    *
-   * @private
+   * @public
+   * @static
    * @param {string} textLine
    * @param {number} cursorPosition
    * @returns {vscode.Range}
@@ -28,6 +34,15 @@ class PositionExtractor {
   }
 
   constructPosition(
+  /**
+   * Extract operator's position and provide a object to construct vscode.Range.
+   *
+   * @param {RegExp} regex
+   * @param {Array<string>} tokens
+   * @param {number} cursorPosition
+   * @returns {object}
+   * @memberOf OperatorManager
+   */
     regex: RegExp,
     tokens: Array<string>,
     cursorPosition: number
