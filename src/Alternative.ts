@@ -1,12 +1,11 @@
 /**
  * Sole purpose of this class is to receive a input and return its alternative.
  *
- *
  * @class Alternative
  */
 class Alternative {
 
-  public alternate(operator: string): string {
+  public static alternate(operator: string): string {
 
     switch (operator) {
       // Addition - Subtraction

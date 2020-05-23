@@ -9,17 +9,14 @@ import * as vscode from 'vscode';
 class OperatorManager {
   private document: vscode.TextDocument;
   private editor: vscode.TextEditor;
-  private alternative: Alternative;
   private positionExtractor: any;
 
   constructor(
     editor: vscode.TextEditor,
-    alternative: Alternative,
     positionExtractor: any
   ) {
       this.document          = editor.document;
       this.editor            = editor;
-      this.alternative       = alternative;
       this.positionExtractor = positionExtractor;
   }
 
@@ -70,7 +67,7 @@ class OperatorManager {
     const operator: string       = this.getRangeAsText(range, this.document);
 
     this.editor.edit((editBuilder: vscode.TextEditorEdit) => {
-      editBuilder.replace(range, this.alternative.alternate(operator));
+      editBuilder.replace(range, Alternative.alternate(operator));
     });
   }
 }
