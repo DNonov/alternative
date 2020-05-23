@@ -1,4 +1,5 @@
 import Alternative from './Alternative';
+import PositionExtractor from './PositionExtractor';
 import * as vscode from 'vscode';
 
 /**
@@ -9,15 +10,10 @@ import * as vscode from 'vscode';
 class OperatorManager {
   private document: vscode.TextDocument;
   private editor: vscode.TextEditor;
-  private positionExtractor: any;
 
-  constructor(
-    editor: vscode.TextEditor,
-    positionExtractor: any
-  ) {
-      this.document          = editor.document;
-      this.editor            = editor;
-      this.positionExtractor = positionExtractor;
+  constructor(editor: vscode.TextEditor) {
+      this.document = editor.document;
+      this.editor   = editor;
   }
 
   /**
@@ -47,7 +43,10 @@ class OperatorManager {
    * @returns {string}
    * @memberof OperatorManager
    */
-  private getRangeAsText(range: vscode.Range, document: vscode.TextDocument): string {
+  private getRangeAsText(
+    range: vscode.Range,
+    document: vscode.TextDocument
+  ): string {
     return document.getText(range);
   }
 
@@ -62,7 +61,7 @@ class OperatorManager {
     const lineNumber: number     = this.editor.selection.active.line;
     const textLine: string       = this.document.lineAt(lineNumber).text;
     const cursorPosition: number = this.editor.selection.active.character;
-    const position: object       = this.positionExtractor.getPositionUnderCursor(textLine, cursorPosition);
+    const position: object       = PositionExtractor.getPositionUnderCursor(textLine, cursorPosition);
     const range: vscode.Range    = this.getRange(position, lineNumber);
     const operator: string       = this.getRangeAsText(range, this.document);
 

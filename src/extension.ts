@@ -2,8 +2,6 @@
 import {window, commands, ExtensionContext} from "vscode";
 const {activeTextEditor}  = window;
 import OperatorManager from "./OperatorManager";
-import Alternative from "./Alternative";
-import PositionExtractor from "./PositionExtractor";
 
 export function activate(context: ExtensionContext) {
   let disposable = commands.registerCommand('extension.alternative', async () => {
@@ -13,9 +11,7 @@ export function activate(context: ExtensionContext) {
       return;
     }
 
-    const alternative       = new Alternative();
-    const positionExtractor = new PositionExtractor();
-    const operatorManager   = new OperatorManager(activeTextEditor, alternative, positionExtractor);
+    const operatorManager = new OperatorManager(activeTextEditor);
     operatorManager.alternate();
   });
 
