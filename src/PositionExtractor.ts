@@ -15,7 +15,7 @@ class PositionExtractor {
    * @returns {vscode.Range}
    * @memberof OperatorManager
    */
-  public getPositionUnderCursor(textLine: string, cursorPosition: number): object {
+  public static getPositionUnderCursor(textLine: string, cursorPosition: number): object {
     // Text representation of the current line, split into chars and so every
     // char is a token.
     const tokens: Array<string> = textLine.split('');
@@ -33,7 +33,6 @@ class PositionExtractor {
     }
   }
 
-  constructPosition(
   /**
    * Extract operator's position and provide a object to construct vscode.Range.
    *
@@ -43,6 +42,7 @@ class PositionExtractor {
    * @returns {object}
    * @memberOf OperatorManager
    */
+  public static constructPosition(
     regex: RegExp,
     tokens: Array<string>,
     cursorPosition: number
