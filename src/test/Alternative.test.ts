@@ -2,15 +2,14 @@ import Alternative from '../Alternative';
 import * as assert from 'assert';
 
 suite('alternates operators', function () {
-    const alternative = new Alternative();
 
     // Bool
     test('alternates bool just one word', () => {
       const word = 'true';
       const oppositeWord = 'false';
 
-      assert.equal(alternative.alternate(word),'false');
-      assert.equal(alternative.alternate(oppositeWord), 'true');
+      assert.equal(Alternative.alternate(word),'false');
+      assert.equal(Alternative.alternate(oppositeWord), 'true');
     });
 
     // Addition
@@ -18,8 +17,8 @@ suite('alternates operators', function () {
       const word = '+';
       const oppositeWord = '-';
 
-      assert.equal(alternative.alternate(word), '-');
-      assert.equal(alternative.alternate(oppositeWord), '+');
+      assert.equal(Alternative.alternate(word), '-');
+      assert.equal(Alternative.alternate(oppositeWord), '+');
     });
 
     // Multiplication
@@ -27,8 +26,8 @@ suite('alternates operators', function () {
       const word = '*';
       const oppositeWord = '/';
 
-      assert.equal(alternative.alternate(word), '/');
-      assert.equal(alternative.alternate(oppositeWord), '*');
+      assert.equal(Alternative.alternate(word), '/');
+      assert.equal(Alternative.alternate(oppositeWord), '*');
     });
 
     // Logical operator
@@ -36,8 +35,8 @@ suite('alternates operators', function () {
       const word = '&&';
       const oppositeWord = '||';
 
-      assert.equal(alternative.alternate(word), '||');
-      assert.equal(alternative.alternate(oppositeWord), '&&');
+      assert.equal(Alternative.alternate(word), '||');
+      assert.equal(Alternative.alternate(oppositeWord), '&&');
     });
 
     // Equality operator
@@ -45,8 +44,8 @@ suite('alternates operators', function () {
       const word = '==';
       const oppositeWord = '!=';
 
-      assert.equal(alternative.alternate(word), '!=');
-      assert.equal(alternative.alternate(oppositeWord), '==');
+      assert.equal(Alternative.alternate(word), '!=');
+      assert.equal(Alternative.alternate(oppositeWord), '==');
     });
 
     // Strict equality operator
@@ -54,8 +53,8 @@ suite('alternates operators', function () {
       const word = '===';
       const oppositeWord = '!==';
 
-      assert.equal(alternative.alternate(word), '!==');
-      assert.equal(alternative.alternate(oppositeWord), '===');
+      assert.equal(Alternative.alternate(word), '!==');
+      assert.equal(Alternative.alternate(oppositeWord), '===');
     });
 
     // Greater operator
@@ -63,8 +62,8 @@ suite('alternates operators', function () {
       const word = '>';
       const oppositeWord = '<';
 
-      assert.equal(alternative.alternate(word), '<');
-      assert.equal(alternative.alternate(oppositeWord), '>');
+      assert.equal(Alternative.alternate(word), '<');
+      assert.equal(Alternative.alternate(oppositeWord), '>');
     });
 
     // Greater or equal operator
@@ -72,8 +71,8 @@ suite('alternates operators', function () {
       const word = '>=';
       const oppositeWord = '<=';
 
-      assert.equal(alternative.alternate(word), '<=');
-      assert.equal(alternative.alternate(oppositeWord), '>=');
+      assert.equal(Alternative.alternate(word), '<=');
+      assert.equal(Alternative.alternate(oppositeWord), '>=');
     });
 
     // Increment operator
@@ -81,8 +80,8 @@ suite('alternates operators', function () {
       const word = '++';
       const oppositeWord = '--';
 
-      assert.equal(alternative.alternate(word), '--');
-      assert.equal(alternative.alternate(oppositeWord), '++');
+      assert.equal(Alternative.alternate(word), '--');
+      assert.equal(Alternative.alternate(oppositeWord), '++');
     });
 
     // Bool Python
@@ -90,7 +89,7 @@ suite('alternates operators', function () {
       const word = 'True';
       const oppositeWord = 'False';
 
-      assert.equal(alternative.alternate(word), 'False');
-      assert.equal(alternative.alternate(oppositeWord), 'True');
+      assert.equal(Alternative.alternate(word), 'False');
+      assert.equal(Alternative.alternate(oppositeWord), 'True');
     });
 });
